@@ -1,0 +1,9 @@
+body
+{
+    background-color:rgb(46, 139, 87,0.4);
+}
+.bordas_claras
+{
+    border-style: solid ;
+    border-color: red;
+}

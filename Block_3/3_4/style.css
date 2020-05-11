@@ -31,3 +31,7 @@ body
 .background_fact{
     background-color: whitesmoke;
 }
+.centralizartabela{
+    margin-left: auto;
+    margin-right: auto;
+}

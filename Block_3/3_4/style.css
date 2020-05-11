@@ -4,21 +4,30 @@ body
 }
 .bordas_claras
 {
-    border-style: solid ;
-    border-color: red;
 }
 .flutuar_direita
 {
     float: right;
 }
 .nao_passar_floats
-{clear: both;
+{
+    clear: both;
 }
-.centralizar
+.centralizarTexto
 {
     text-align: center;
 }
 .background_header
 {
-    font: green;
+    background-color: wheat;
+}
+.background_footer
+{
+    background-color: wheat;
+}
+.main_background{
+    background-color: wheat;
+}
+.background_fact{
+    background-color: whitesmoke;
 }

@@ -7,3 +7,18 @@ body
     border-style: solid ;
     border-color: red;
 }
+.flutuar_direita
+{
+    float: right;
+}
+.nao_passar_floats
+{clear: both;
+}
+.centralizar
+{
+    text-align: center;
+}
+.background_header
+{
+    font: green;
+}

@@ -11,3 +11,4 @@ else {
   console.log(false);
 }
 
+console.log("Not a triangle")

@@ -1,4 +1,4 @@
-let n = 7;
+let n = 5;
 let text = "     "
 let v = [];
 for (let index = 0; index < n; index++) {

@@ -1,5 +1,8 @@
 let n = 5;
-let text = "     "
+let vetor =new Array(n);
+vetor.fill(" ",0,n)
+let text = vetor.join("");
+
 
 for (let i = 0; i <=n; i++) {
  

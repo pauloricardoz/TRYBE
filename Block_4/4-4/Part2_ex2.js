@@ -1,14 +1,14 @@
-function BiggerNameInArray(arrayWithNumbers=[2, 3, 6, 7, 10, 1]) {
+function lowerNumberInArray(arrayWithNumbers=[2, 3, 6, 7, 10, 1]) {
   let biggest=arrayWithNumbers[0];
-  indexLower=0;
+  let indexBiggest=0;
   for (const index in arrayWithNumbers) {
     if (arrayWithNumbers[index]>biggest) {
       biggest=arrayWithNumbers[index];
-      indexLower=index;
+      indexBiggest=index;
       
     }
   }
-  return indexLower;
+  return indexBiggest;
 }
 
-console.log(BiggerNameInArray());
+console.log(lowerNumberInArray());

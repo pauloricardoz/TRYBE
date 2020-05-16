@@ -8,4 +8,4 @@ function stringWithSameEnd(firstString = "Trybe", secondString = "be") {
   }
 
 }
-stringWithSameEnd();
+console.log(stringWithSameEnd());

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      .classe1{
+        background-color: brown;
+      }
+      .classe2{
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="classe1">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="classe1">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.getElementsByClassName("classe1");
+      paragraph[0].className="classe2";
+      var subtitulo=document.getElementsByTagName("h4");
+      console.log(subtitulo[0].innerHTML);
+
+      /*paragraph.innerText = "Um principe em Nova York";
+      console.log(paragraph.innerText);
+      paragraph = document.getElementById("second-paragraph");
+      paragraph.innerText = "Goonies";
+      console.log(paragraph.innerText);
+      */
+    </script>
+  </body>
+</html>

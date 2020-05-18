@@ -70,14 +70,22 @@
     }
     //3
     function colorChange2(desc="center-content",cor="green"){
-      console.log(document.getElementsByClassName(desc)[0].style.backgroundColor=cor) ;
+      (document.getElementsByClassName(desc)[0].style.backgroundColor=cor) ;
   
     }
+    //4
     function CorrectionText(desc="title",texto="Exercício 4.5 - JavaScript"){
-      console.log(document.getElementsByClassName(desc)[0].innerHTML=texto) ;
+      (document.getElementsByClassName(desc)[0].innerHTML=texto) ;
   
     }
-    
+    //5
+    function AllCapslock(){
+      for (let index = 0; index < document.getElementsByTagName("p").length; index++) {
+       document.getElementsByTagName("p")[index].innerHTML=document.getElementsByTagName("p")[index].innerHTML.toUpperCase() ;
+        
+      }
+     
+    }
   </script>
 
 </body>

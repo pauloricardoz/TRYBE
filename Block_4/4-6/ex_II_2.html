@@ -113,13 +113,17 @@
     }
 
     //exercise II 1
-    document.getElementsByTagName("h1")[0].className="title";
+    document.getElementsByTagName("h1")[0].className = "title";
 
 
-    //exercise II 1
- for (let i of document.getElementsByTagName("h3")) {
-   i.className="description";
-  }   
+    //exercise II 2
+    for (let i of document.getElementsByTagName("h3")) {
+      i.className = "description";
+    }
+    //exercise II 3
+    h =document.getElementsByClassName("left-content")[0];
+    document.getElementsByClassName("left-content")[0].parentNode.removeChild(h);
+
   </script>
 </body>
 

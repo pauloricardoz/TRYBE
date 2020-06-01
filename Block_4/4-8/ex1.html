@@ -10,23 +10,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <!-- Avocet Secure JavaScript Pixel - Website: Lipsum - 5e88559ea6073220677e11e7 -->
-  <!-- end -->
 </head>
 
 <body>
   <div id="Outer">
     <div>
       <label for="fBackColor">Background Color:</label>
-      <input type="text" id="BackgroundColor_page"><br><br>
+      <input type="text" id="BackgroundColor_page"><br>
       <label for="fTextColor">Text Color:</label>
-      <input type="text" id="Text_color"><br><br>
+      <input type="text" id="Text_color"><br>
       <label for="fFontSize">Font Size:</label>
-      <input type="fontSize" id="Font_size"><br><br>
+      <input type="fontSize" id="Font_size"><br>
       <label for="fLineHeight">Line Height:</label>
-      <input type="lineHeight" id="Line_height"><br><br>
+      <input type="lineHeight" id="Line_height"><br>
       <label for="fFontFamily">Font Family:</label>
-      <input type="fontFamily" id="Font_family"><br><br>
+      <input type="fontFamily" id="Font_family"><br>
       <input type="submit" value="Submit" id="myBtn">
     </div>
     <h1>Lorem Ipsum</h1>
@@ -40,14 +38,12 @@
     <div id="Content">
       <div id="bannerL">
         <div id="div-gpt-ad-1474537762122-2">
-          <script
-            type="text/javascript">googletag.cmd.push(function () { googletag.display("div-gpt-ad-1474537762122-2"); });</script>
+
         </div>
       </div>
       <div id="bannerR">
         <div id="div-gpt-ad-1474537762122-3">
-          <script
-            type="text/javascript">googletag.cmd.push(function () { googletag.display("div-gpt-ad-1474537762122-3"); });</script>
+
         </div>
       </div>
       <div class="boxed">
@@ -112,32 +108,63 @@ on our API rather than parse the HTML below, we have XML and JSON available.
   </div>
 
   <script>
-    window.onload = function () {
-      if (localStorage.getItem("bgCOLOR") != null) {
-       document.body.style.backgroundColor=localStorage.getItem("bgCOLOR")
-      }
-     // if (localStorage.getItem("txCOLOR") != null) {
-     //  document.body.style.textDecorationColor=localStorage.getItem("txCOLOR")
-     // }
-     document.getElementById("myBtn").addEventListener("click", function(){
-      localStorage.setItem("bgCOLOR",document.getElementById("BackgroundColor_page").value)
-      document.body.style.backgroundColor=localStorage.getItem("bgCOLOR")
-     });
-    };
-  </script>
+    let botao = document.getElementById("myBtn")
+    let BackColor = document.getElementById("BackgroundColor_page")
+    let TextColor = document.getElementById("Text_color")
+    let FontSize = document.getElementById("Font_size")
+    let LineHeight = document.getElementById("Line_height")
+    let FontFamily = document.getElementById("Font_family")
+    window.onload = Starting
+    function Starting() {
+      if (localStorage.getItem("BackgroundColor_page") != undefined)
+        document.body.style.backgroundColor = localStorage.getItem("BackgroundColor_page");
+
+      if (localStorage.getItem("Text_color") != undefined)
+        document.body.style.color = localStorage.getItem("Text_color");
+
+      if (localStorage.getItem("Font_size") != undefined)
+        document.body.style.fontSize = localStorage.getItem("Font_size")+"px";
+
+      if (localStorage.getItem("Line_height") != undefined)
+        document.body.style.lineHeight = localStorage.getItem("Line_height")+"px";
+
+      if (localStorage.getItem("Font_family") != undefined)
+        document.body.style.fontFamily = localStorage.getItem("Font_family");
+    }
+
+botao.addEventListener("click",function () {
   
-  <!-- Generated in 0.006 seconds -->
+  if (BackColor.value != "") {
+              document.body.style.backgroundColor = BackColor.value
+              setter(BackColor, "BackgroundColor_page")
+            }
+            if (TextColor.value != "") {
+              document.body.style.color = TextColor.value
+              setter(TextColor, "Text_color")
+            }
+            if (FontSize.value != "") {
+              document.body.style.fontSize = (FontSize.value)+"px"
+              setter(FontSize, "Font_size")
+            }
+            if (LineHeight.value != "") {
+              document.body.style.lineHeight = LineHeight.value +"px"
+              setter(LineHeight, "Line_height")
+            }
+            if (FontFamily.value != "") {
+              document.body.style.fontFamily = FontFamily.value
+              setter(FontFamily, "Font_family")
+            }
+
+});
+
+    function setter(element, key) {
+      localStorage.setItem(key, element.value)
+      alert(key+"  "+ element.value)
+
+    }
+
+  </script>
+
 </body>
 
 </html>
-<!--<label for="fBackColor">Background Color:</label>
-      <input type="text" id="BackgroundColor_page"><br><br>
-      <label for="fTextColor">Text Color:</label>
-      <input type="text" id="Text_color"><br><br>
-      <label for="fFontSize">Font Size:</label>
-      <input type="fontSize" id="Font_size"><br><br>
-      <label for="fLineHeight">Line Height:</label>
-      <input type="lineHeight" id="Line_height"><br><br>
-      <label for="fFontFamily">Font Family:</label>
-      <input type="fontFamily" id="Font_family"><br><br>
-      <input type="submit" value="Submit" id="myBtn">-->

@@ -1,0 +1,13 @@
+fieldset {
+  width: 50%
+}
+
+button {
+  font-size: 1.25em;
+  border-radius: 40%;
+}
+
+body {
+  background-color: bisque;
+  line-height: 1.5em;
+}

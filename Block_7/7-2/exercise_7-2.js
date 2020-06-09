@@ -22,6 +22,13 @@ function turno(objeto, chave, valor) {
   objeto[chave] = valor;
 }
 
+function listaChaves(objeto) {
+  console.log(Object.keys(objeto));
+}
+
+function tamanho(objeto) {
+  console.log(Object.keys(objeto).length);
+}
+
 console.log(lesson2);
-turno(lesson2, 'turno', 'manha');
-console.log(lesson2);
+tamanho(lesson2);

@@ -1,58 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculo</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-
-<body>
-  <h1>Cadastro de Curriculo</h1>
-  <form action="" method="get" id="myForm">
-    
-    <fieldset id="basicData">
-      <legend>Dados Pessoais</legend>
-      <label for="fNome">Nome:</label>
-      <input id="fNome" name='fNome' type="text" maxlength="40" required='required'>
-      <br>
-      <label for="fEmail">E-mail:</label>
-      <input id="fEmail" name='fEmail' type="text" maxlength="50" required='required'>
-      <br>
-      <label for="fCPF">CPF:</label>
-      <input id="fCPF" name='fCPF' type="text" maxlength="11" required='required'>
-      <br>
-      <label for="fEndereco">Endereço:</label>
-      <input id="fEndereco" name='fEndereco' type="text" maxlength="200" required='required'>
-      <br>
-      <label for="fCidade">Cidade:</label>
-      <input id="fCidade" name='fCidade' type="text" maxlength="28" required='required'>
-      <br>
-      <label for="fEstado">Estado:</label>
-      <select required='required' name='fEstado' id="fEstado"></select>
-      <br>
-      <span>Tipo de residencia:</span>
-      <label for="tipo1">Apartamento</label><input name="tipoDeCasa" id="tipo1" value="apartamento" type="radio"
-        required='required'>
-      <label for="tipo2">Casa</label><input name="tipoDeCasa" id="tipo2" value="casa" type="radio" required='required'>
-    </fieldset>
-
-    <fieldset id="lastJob">
-      <legend>Dados do Ultimo Emprego</legend>
-      <label for="">Descrição: </label><textarea cols="100" rows="10" maxlength="1000" required='required'></textarea>
-      <br>
-      <label for="">Cargo: </label><input type="text" maxlength="40" required="required">
-      <br>
-      <label for="">Descrição do cargo: </label> <textarea name="" id="" cols="100" rows="5"
-        required='required'></textarea>
-      <br>
-      <label for="">Data: </label><input type="text" placeholder="dd/mm/aaaa" id="dataEntrada" maxlength="10" minlength="10">
-    </fieldset>
-    <button id="bSubmit">Submit</button> <button id="limpar">Limpar</button>
-  </form>
-
-  <script src="script.js"></script>
-</body>
-
+  <body class="body">
+    <h1>Cadastro de Curriculo</h1>
+    <form action="" method="get" id="myForm">
+      <fieldset id="basicData">
+        <legend>Dados Pessoais</legend>
+        <label for="fNome">Nome:</label>
+        <input
+          id="fNome"
+          name="fNome"
+          type="text"
+          maxlength="40"
+          required="required"
+        />
+        <br />
+        <label for="fEmail">E-mail:</label>
+        <input
+          id="fEmail"
+          name="fEmail"
+          type="text"
+          maxlength="50"
+          required="required"
+        />
+        <br />
+        <label for="fCPF">CPF:</label>
+        <input
+          id="fCPF"
+          name="fCPF"
+          type="text"
+          maxlength="11"
+          required="required"
+        />
+        <br />
+        <label for="fEndereco">Endereço:</label>
+        <input
+          id="fEndereco"
+          name="fEndereco"
+          type="text"
+          maxlength="200"
+          required="required"
+        />
+        <br />
+        <label for="fCidade">Cidade:</label>
+        <input
+          id="fCidade"
+          name="fCidade"
+          type="text"
+          maxlength="28"
+          required="required"
+        />
+        <br />
+        <label for="fEstado">Estado:</label>
+        <select required="required" name="fEstado" id="fEstado"></select>
+        <br />
+        <span>Tipo de residencia:</span>
+        <label for="tipo1">Apartamento</label
+        ><input
+          name="tipoDeCasa"
+          id="tipo1"
+          value="apartamento"
+          type="radio"
+          required="required"
+        />
+        <label for="tipo2">Casa</label
+        ><input
+          name="tipoDeCasa"
+          id="tipo2"
+          value="casa"
+          type="radio"
+          required="required"
+        />
+      </fieldset>
+      <fieldset id="lastJob">
+        <legend>Dados do Ultimo Emprego</legend>
+        <label for="">Descrição: </label
+        ><textarea
+          cols="100"
+          rows="10"
+          maxlength="1000"
+          required="required"
+        ></textarea>
+        <br />
+        <label for="">Cargo: </label
+        ><input type="text" maxlength="40" required="required" />
+        <br />
+        <label for="">Descrição do cargo: </label>
+        <textarea
+          name=""
+          id=""
+          cols="100"
+          rows="5"
+          required="required"
+        ></textarea>
+        <br />
+        <label for="">Data: </label
+        ><input
+          type="text"
+          placeholder="dd/mm/aaaa"
+          id="dataEntrada"
+          maxlength="10"
+          minlength="10"
+        />
+      </fieldset>
+      <button id="bSubmit">Submit</button> <button id="limpar">Limpar</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>

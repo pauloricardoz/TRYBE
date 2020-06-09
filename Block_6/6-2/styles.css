@@ -1,5 +1,5 @@
 fieldset {
-  width: 50%
+  width: 50%;
 }
 
 button {
@@ -8,6 +8,11 @@ button {
 }
 
 body {
+  background-color: bisque;
+  line-height: 1.5em;
+}
+
+.body {
   background-color: bisque;
   line-height: 1.5em;
 }

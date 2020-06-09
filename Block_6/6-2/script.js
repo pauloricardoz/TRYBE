@@ -25,12 +25,13 @@ const stateList = [
   ['Santa Catarina', 'SC'],
   ['São Paulo', 'SP'],
   ['Sergipe', 'SE'],
-  ['Tocantins', 'TO']
+  ['Tocantins', 'TO'],
 ];
 const data = document.getElementById('dataEntrada');
 data.addEventListener('change', function () {
+  lat tudo="";
   if (data.value.length < 10) {
-    alert("Formato invalido! Ano deve ser colocado dd/mm/aaaa");
+    alert('Formato invalido! Ano deve ser colocado dd/mm/aaaa');
   }
   let dataQuebrada = data.value.split('/');
   if (dataQuebrada[0] > 31 || dataQuebrada[0] < 1) {
@@ -53,49 +54,52 @@ for (let num = 0; num < stateList.length; num++) {
   estados.appendChild(estado);
 }
 let botaoSubmit = document.getElementById('bSubmit');
-console.log(botaoSubmit)
-botaoSubmit.addEventListener('click',teste); 
-function teste () {
-
+console.log(botaoSubmit);
+botaoSubmit.addEventListener('click', teste);
+function teste() {
   const inputs = document.getElementsByTagName('input');
-
-      console.log(inputs)
+  event.preventDefault();
+  console.log(inputs);
   for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value == "") { 
-      alert('prevent')
+    if (inputs[i].value == '') {
+      alert('prevent');
       event.preventDefault();
     }
   }
-  console.log(inputs)
-}
-let subtido = document.getElementById('myForm')
-subtido.onsubmit = function () {
-  const inputs = document.getElementsByTagName('input');
-  console.log(inputs)
   const div = document.createElement('div');
-  if (document.getElementsByTagName('div').length== 0) {
-    
+  if (document.getElementsByTagName('div').length == 0) {
     document.body.appendChild(div);
-  }
-  else {
-    document.getElementsByTagName('div')[0].innerHTML = "";
+  } else {
+    document.getElementsByTagName('div')[0].innerHTML = '';
   }
   for (let i = 0; i < inputs.length; i++) {
-
-    let entrada = document.createElement('p')
-    entrada.innerHTML=inputs[i].value
-    document.getElementsByTagName('div')[0].appendChild(entrada)
-
-
+    let entrada = document.createElement('p');
+    entrada.innerHTML = inputs[i].value;
+    document.getElementsByTagName('div')[0].appendChild(entrada);
   }
-  localStorage.setItem('teste',div.innerText)
-  alert('aqui')
 }
-
+let subtido = document.getElementById('myForm');
+subtido.onsubmit = function () {
+  event.preventDefault();
+  const inputs = document.getElementsByTagName('input');
+  console.log(inputs);
+  const div = document.createElement('div');
+  if (document.getElementsByTagName('div').length == 0) {
+    document.body.appendChild(div);
+  } else {
+    document.getElementsByTagName('div')[0].innerHTML = '';
+  }
+  for (let i = 0; i < inputs.length; i++) {
+    let entrada = document.createElement('p');
+    entrada.innerHTML = inputs[i].value;
+    document.getElementsByTagName('div')[0].appendChild(entrada);
+  }
+  localStorage.setItem('teste', div.innerText);
+  alert('aqui');
+};
 let botaoLimpar = document.getElementById('limpar');
 botaoLimpar.addEventListener('click', function () {
   for (let i = 0; i < inputs.length; i++) {
-    inputs[i].value == ""
-
+    inputs[i].value == '';
   }
-})
+});

@@ -1,11 +1,10 @@
 const assert = require('assert');
 // escreva a função addOne para passar nos testes abaixo:
-const addOne = (myArray) => {
+const addOne = (arr) => {
   let newArray = [];
-  for (let i = 0; i < myArray.length; i++) {
-    newArray.push(myArray[i] + 1);
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(arr[i] + 1);
   }
-  console.log(newArray);
   return newArray;
 };
 //
@@ -16,5 +15,7 @@ const output = addOne(myArray);
 
 assert.strictEqual(typeof addOne, 'function', 'sem funcao');
 assert.deepEqual(output, expected, `erro1 -> ${output} - ${expected}`);
-assert.deepEqual(myArray, unchanged, 'erro2');
-asserts.deepEqual([1, 2, 3, 4], [2, 3, 4, 5], 'erro3');
+assert.deepEqual(myArray, unchanged, 'erro2 -> ${myArray} - ${unchanged}');
+const v1 = [1, 2, 3, 4];
+const v2 = [2, 3, 4, 5];
+assert.deepEqual(addOne(v1), v2, `erro3 -> ${v1} - ${v2}`);

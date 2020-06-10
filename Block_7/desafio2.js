@@ -16,3 +16,4 @@ assert.strictEqual(
 );
 const output = wordLengths(words);
 assert.deepEqual(output, expected, `erro2 ${output} ${expected}`);
+new

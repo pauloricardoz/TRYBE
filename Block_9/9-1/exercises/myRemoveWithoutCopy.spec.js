@@ -1,25 +1,17 @@
-const assert = require('assert');
+// const assert = require('assert');
+const { timeStamp } = require('console');
+const myRemoveWithoutCopy = require('./myRemoveWithoutCopy');
 
-function myRemoveWithoutCopy(arr, item) {
-  for (let i = 0, len = arr.length; i < len; i += 1) {
-    if (arr[i] === item) {
-      arr.splice(i, 1);
-      i -= 1;
-      len -= 1;
-    }
-  }
 
-  return arr;
-}
-
-// implemente seus testes aqui
-let vetor = [1, 2, 3, 4];
-assert.deepEqual(myRemoveWithoutCopy(vetor, 3), [1, 2, 4], 'ok1');
-vetor = [1, 2, 3, 4];
-assert.notDeepEqual(myRemoveWithoutCopy(vetor, 3), [1, 2, 3, 4], 'ok2');
-vetor = [1, 2, 3, 4];
-myRemoveWithoutCopy(vetor, 1);
-console.log(vetor);
-assert.deepEqual(vetor, [[1, 2, 3, 4]], 'ok3');
-vetor = [1, 2, 3, 4];
-assert.deepEqual(myRemoveWithoutCopy(vetor, 5), [[1, 2, 3, 4]], 'ok4');
+test('test removing element in an array', () => {
+  let vetor = [1, 2, 3, 4];
+  expect(myRemoveWithoutCopy(vetor, 3)).toEqual([1, 2, 4]);
+  vetor = [1, 2, 3, 4];
+  expect(myRemoveWithoutCopy(vetor, 3)).not.toEqual([1, 2, 3, 4]);
+  vetor = [1, 2, 3, 4];
+  myRemoveWithoutCopy(vetor, 1);
+  console.log(vetor);
+  expect(vetor).not.toEqual([1, 2, 3, 4]);
+  vetor = [1, 2, 3, 4];
+  expect(myRemoveWithoutCopy(vetor, 5)).toEqual([1, 2, 3, 4]);
+})

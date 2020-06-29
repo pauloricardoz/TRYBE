@@ -9,8 +9,4 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
-
-// implemente seus testes aqui
-let vetor = [1, 2, 3, 4];
-assert.deepEqual(myRemove(vetor, 3), [1, 2, 4]);
-assert.deepEqual(myRemove([1, 2, 3, 4], 5), vetor);
+module.exports= myRemove;

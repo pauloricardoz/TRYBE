@@ -9,14 +9,20 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-  n = toString(n).split('');
+  if(n === 0) return 0
+  n = n.toString().split('');
   if(n[0]==='-') {
-    const signal= n.unshift();
+    const signal= n.shift();
+    if (n[n.length-1]!== 0) {
     n.reverse();
-    return signal+n.join('');
+    } else {
+      while (n[n.length-1]=== 0 && n.length>0)
+      n.pop();
+    }
+    return parseInt(signal+n.join(''));
   } else {
     n.reverse();
-    return n.join('');
+    return parseInt(n.join(''));
   }
 }
 

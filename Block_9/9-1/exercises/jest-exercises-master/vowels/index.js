@@ -8,7 +8,8 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-
+  return str.split('').reduce((a,c) => /[aeiou]/gi.test(c)===true?a+=1:a,0);
 }
+vowels('aeiou')
 
 module.exports = vowels;

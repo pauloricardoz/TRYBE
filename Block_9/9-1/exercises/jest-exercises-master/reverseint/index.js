@@ -9,7 +9,15 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-
+  n = toString(n).split('');
+  if(n[0]==='-') {
+    const signal= n.unshift();
+    n.reverse();
+    return signal+n.join('');
+  } else {
+    n.reverse();
+    return n.join('');
+  }
 }
 
 module.exports = reverseInt;

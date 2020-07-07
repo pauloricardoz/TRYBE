@@ -22,6 +22,7 @@ function turno(objeto, chave, valor) {
   objeto[chave] = valor;
 }
 
+
 //second exercise - Crie uma função para listar as keys de um objeto
 function listaChaves(objeto) {
   console.log(Object.keys(objeto));
@@ -99,3 +100,4 @@ function createReport(objeto, professor) {
   return { professor: professor, aulas: materia, estudantes: estudantes };
 }
 console.log(createReport(allLessons, 'Maria Clara'));
+

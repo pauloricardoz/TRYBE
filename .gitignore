@@ -1,2 +1,4 @@
 *.sh
+node_modules
 CodeWar
+package-*.json

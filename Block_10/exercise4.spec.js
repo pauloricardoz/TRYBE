@@ -6,4 +6,12 @@ const getRepos = (url) => {
       return data.map((repo) => repo.name)
     });
 }
-console.log(getRepos('https://api.github.com/users/tryber/repos'))
+
+
+it('get repo names', () => {
+  const url = 'https://api.github.com/users/tryber/repos';
+  return getRepos(url).then(re => {
+    expect(re).toContain('sd-01-week4-5-project-todo-list');
+    expect(re).toContain('sd-01-week4-5-project-meme-generator');
+  })
+})
